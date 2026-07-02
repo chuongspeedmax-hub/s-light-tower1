@@ -1,0 +1,17 @@
+{
+  "name": "S-Light Tower Đà Nẵng",
+  "short_name": "S-Light Tower",
+  "description": "Tòa tháp căn hộ hạng sang mặt sông Hàn - Sun Group. Sở hữu lâu dài, view panorama 270°, trực diện pháo hoa DIFF.",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#071527",
+  "theme_color": "#0b1f3a",
+  "lang": "vi",
+  "icons": [
+    {
+      "src": "images/hero-panorama.jpg",
+      "sizes": "1024x768",
+      "type": "image/jpeg"
+    }
+  ]
+}

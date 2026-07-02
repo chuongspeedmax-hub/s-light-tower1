@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://slight-tower.example.com/sitemap.xml
