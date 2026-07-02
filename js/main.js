@@ -6,8 +6,7 @@
    ==================================================== */
 (() => {
   'use strict';
-
-  const API_URL = 'https://script.google.com/macros/s/AKfycbxRY0aLy3eGmjiCM5GgG1UwLm7RDcYhalrJdxQKre1CNTW5lRN0MMYEqii30xlrrUnR/exec';
+   const API_URL = 'https://script.google.com/macros/s/AKfycbyPyfLrF7PDvcbZdD60Ozs8EAdGYg9qv4v_tqGJaC0QFpDtzWfE4MsmiuijkrEUFbkF/exec';
 
   const $  = (sel, ctx = document) => ctx.querySelector(sel);
   const $$ = (sel, ctx = document) => Array.from(ctx.querySelectorAll(sel));
