@@ -752,7 +752,7 @@
   </div>
 
   <!-- ============ LIGHTBOX ============ -->
-  <div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-label="Xem ảnh phóng to" hidden>
+   <div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-label="Xem ảnh phóng to" hidden>
     <button type="button" class="lightbox-close" aria-label="Đóng ảnh">&times;</button>
     <button type="button" class="lightbox-arrow lightbox-prev" aria-label="Ảnh trước">&#10094;</button>
     <figure class="lightbox-figure">
@@ -766,5 +766,34 @@
   <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
 
   <script src="js/main.js" defer></script>
+
+  <!-- SUPABASE -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+  <script>
+    const supabaseUrl = "https://obhgvjlyffjpzoqdwoom.supabase.co";
+    const supabaseKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im9iaGd2amx5ZmZqcHpvcWR3b29tIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODI5Nzk5MzYsImV4cCI6MjA5ODU1NTkzNn0.rn6eEwxm0Ua05kkkoTWZw6dNRYZFy7e1v4NSI2tSF0g";
+
+    const client = supabase.createClient(supabaseUrl, supabaseKey);
+
+    async function sendForm() {
+      const name = document.getElementById("name").value;
+      const phone = document.getElementById("phone").value;
+      const email = document.getElementById("email").value;
+      const apartment = document.getElementById("apartment").value;
+      const message = document.getElementById("message").value;
+
+      const { error } = await client
+        .from("contacts")
+        .insert([{ name, phone, email, apartment, message }]);
+
+      if (error) {
+        alert("Gửi thất bại: " + error.message);
+      } else {
+        alert("Gửi thành công!");
+      }
+    }
+  </script>
+
 </body>
 </html>
